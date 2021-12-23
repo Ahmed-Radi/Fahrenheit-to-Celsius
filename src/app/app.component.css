@@ -1,0 +1,39 @@
+/* background:#a28dff; */
+body {}
+.container {
+  background:#a28dff;
+  border-radius: 20px;
+  margin-top: 7%;
+  height: 500px;
+  width: 400px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.fahrenheit,
+.celsius {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 20px;
+}
+label {
+  /* background-color: bisque; */
+  width: 90px;
+  padding: 5px;
+}
+input {
+  border: none;
+  border-bottom: 4px solid #6abcff;
+  outline: none;
+  margin-left: 10px;
+  padding: 5px;
+}
+input:focus {
+  border: 3px solid #6abcff;
+}
+.unit {
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 5px;
+}
+

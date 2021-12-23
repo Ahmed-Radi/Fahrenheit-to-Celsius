@@ -1,0 +1,47 @@
+<h4 class="h1 text-center mt-3">Convert from Fahrenheit to Celsius</h4>
+<div class="container">
+  <div class="content">
+    <div>
+      <div class="fahrenheit">
+        <label for="fahrenheit">Fahrenheit</label>
+        <input
+          type="text"
+          id="fahrenheit"
+          [(ngModel)]="fahrenheit"
+          value="{{ celsius | temperature: 'f' }}"
+          placeholder="fahrenheit temperature"
+        />
+        <span class="unit"><sup>O</sup>F</span>
+      </div>
+
+      <div class="celsius">
+        <label for="celsius">Celsius</label>
+        <input
+          type="text"
+          [(ngModel)]="celsius"
+          id="celsius"
+          value="{{ fahrenheit | temperature: 'c' }}"
+          placeholder="celsius temperature"
+        />
+        <span class="unit"><sup>O</sup>C</span>
+      </div>
+      <!-- <span *ngIf="celsius || fahrenheit">{{ fahrenheit | temperature: 'c' }} <sup>O</sup>C = {{ celsius | temperature: 'f' }}<sup>O</sup>F</span> -->
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- if enter string -->
+  <!-- <span *ngIf="fahrenheit">Please Enter fahrenheit as Number</span>
+  <span *ngIf="celsius">Please Enter celsius as Number</span> -->
+
+  <!-- <div class="equation" *ngIf="fahrenheit !== 0">
+    ({{ fahrenheit }} - 32)/1.8 = {{ celsius | temperature: "f" }}
+  </div>
+  <div class="equation" *ngIf="celsius !== 0">
+    ({{ celsius }} * 1.8) + 32 = {{ fahrenheit | temperature: "c" }}
+  </div> -->
+
+
+<router-outlet></router-outlet>
